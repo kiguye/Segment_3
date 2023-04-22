@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mouseover and Mouseout Events</title>
+        <style>
+            div {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Roll the mouse over the Boxes.</h1>
+        <div></div>
+        
+        <script>
+            var heading = document.querySelector('h1');
+            var box = document.querySelector('div');
+
+            box.addEventListener("mouseover", function() {
+                heading.innerHTML = "The cursor is over the box";
+            })
+
+            box.addEventListener("mouseout", function() {
+                heading.innerHTML = "The cursor has left the box";
+            })
+
+            heading.addEventListener("mouseover", function() {
+                heading.innerHTML = "Roll the mouse over the Boxes ";
+            })
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Event Listeners</title>
+    </head>
+    <body>
+        <h1>Event Listener</h1>
+        <p> Event Listeners are a btter and more modern way
+            to capture and render an action in case of an event.</p>
+            <p>Here we use the addEventListener() method.</p>
+        <button> Dont press me!</button>
+
+        <script>
+            var btn = document.querySelector('button');
+
+            function ouch() {
+                alert("WTF I told you not to press me.");
+                console.log("The button has been clicked");
+            }
+
+            btn.addEventListener("click", ouch);
+
+            /** Alternatively 
+            btn.addEventListener("click", function() {
+                alert("I told you not to click me.");
+                console.log("The button has been clicked");
+            }) */
+        </script>
+    </body>
+</html>

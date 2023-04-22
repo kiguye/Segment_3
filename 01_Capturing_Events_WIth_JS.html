@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Events</title>
+    </head>
+    <body>
+        <h1>JavaScript Events</h1>
+        <button> Dont press me!</button>
+
+        <script>
+            var btn = document.querySelector('button');
+
+            function ouch() {
+                alert("WTF I told you not to press me.");
+            }
+
+            btn.onclick = ouch;
+
+            /** Alternative approach. 
+            btn.onclick = function() {
+                alert("I told you not to press me");
+            }
+            */
+        </script>
+    </body>
+</html>

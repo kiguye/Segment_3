@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Submit Event</title>
+    </head>
+    <body>
+        <h1>Submit Event</h1>
+        <form method="get">
+            <label>Your name: <input type="text" name="name"></label>
+            <input type="submit" value="submit this">
+        </form>
+
+
+        <script>
+            var myForm = document.querySelector('form');
+
+            // Using the event object and preventDefault()
+            myForm.addEventListener("submit", function(event){
+                // event.preventDefault();
+                console.log("Default action blocked");
+
+                var formData = document.querySelector('input').value;
+                alert("Hey Collins", formData);
+            })
+        </script>
+    </body>
+</html>

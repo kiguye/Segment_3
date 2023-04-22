@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Preventing default behavior</title>
+    </head>
+    <body>
+        <h1>Preventing default behavior</h1>
+        <a href="http://google.com">Go to Google</a>
+
+
+        <script>
+            var btn = document.querySelector('a');
+
+            function ouch() {
+                alert("WTF I told you not to press me.");
+            }
+
+            // Using the event object and preventDefault()
+            btn.addEventListener("click", function(event){
+                event.preventDefault();
+                alert("Where do you think you are going?")
+                console.log("Hyperlink has been clicked");
+            })
+        </script>
+    </body>
+</html>

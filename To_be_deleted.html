@@ -1,0 +1,17 @@
+<html>
+    <script lang="JavaScript">
+        function moveFocus() {
+            document.myForm.button1.focus();
+        }
+    </script>
+
+    <form name="myForm">
+        <input type="button"
+               value="I hold my focus after a click"
+               name="button1"><br>
+        <input type="button"
+               value="I shift my focus when click"
+               name="button2"
+               onClick="moveFocus()">
+    </form>
+</html>
